@@ -1,0 +1,128 @@
+/* Body */
+.ce-body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: url("../images/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* Header */
+.ce-header {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.ce-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+}
+
+.back-btn {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  padding: 6px 10px;
+}
+
+/* Main */
+.ce-main {
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.ce-card {
+  background: rgba(255,255,255,0.85);
+  padding: 40px 40px;
+  border-radius: 18px;
+  max-width: 700px;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.12);
+}
+
+/* Form */
+.ce-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ce-form label {
+  font-weight: 600;
+  color: #000;
+}
+
+.ce-form input,
+.ce-form textarea,
+.ce-form select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background: rgba(255,255,255,0.95);
+}
+
+.ce-form textarea {
+  resize: none;
+}
+
+.ce-row {
+  display: flex;
+  gap: 15px;
+}
+
+.ce-row > div {
+  flex: 1;
+}
+
+/* Button */
+.ce-btn {
+  background: linear-gradient(135deg, #ffb347, #ffcc33);
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.ce-btn:hover {
+  background: linear-gradient(135deg, #ffcc33, #ffb347);
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.ce-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.65);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Responsive */
+@media (max-width: 750px) {
+  .ce-row {
+    flex-direction: column;
+  }
+
+  .ce-card {
+    padding: 30px 25px;
+  }
+
+  .ce-header {
+    padding: 15px 20px;
+  }
+}
