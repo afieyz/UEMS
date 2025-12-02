@@ -34,7 +34,11 @@ if ($loggedIn) {
 }
 
 // payment check
+<<<<<<< HEAD
 $requiresPayment = (!empty($event['payment_amount']) && floatval($event['payment_amount']) > 0);
+=======
+$requiresPayment = (array_key_exists('payment_amount', $event) && floatval($event['payment_amount']) > 0);
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 
 function fTime($t){ return $t ? date("g:i A", strtotime($t)) : "-"; }
 ?>
@@ -52,6 +56,7 @@ function fTime($t){ return $t ? date("g:i A", strtotime($t)) : "-"; }
 .event-hero { background:white; border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,0.06); }
 .event-img { width:100%; max-height:320px; object-fit:cover; border-radius:12px; margin-bottom:18px; }
 
+<<<<<<< HEAD
 #imgPopupOverlay {
     position: fixed;
     inset: 0;
@@ -68,6 +73,28 @@ function fTime($t){ return $t ? date("g:i A", strtotime($t)) : "-"; }
 }
 .clickable-image { cursor: pointer; transition: 0.2s ease; }
 .clickable-image:hover { transform: scale(1.02); }
+=======
+.detail-box { margin-bottom:15px; }
+.detail-box label { font-weight:600; color:#333; display:block; margin-bottom:4px; }
+.detail-box p { margin:0; color:#444; }
+
+.join-btn { display:inline-block; padding:12px 18px; margin-top:20px;
+    border-radius:10px; background:linear-gradient(135deg,#ffb347,#ffcc33);
+    font-weight:600; color:#000; text-decoration:none; cursor:pointer; }
+.btn-secondary { padding:10px 14px; background:#ddd; border-radius:8px; }
+
+.popup-backdrop {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+    display:none; justify-content:center; align-items:center; z-index:2000;
+}
+.popup-box {
+    background:#fff; padding:20px; border-radius:12px;
+    width:350px; text-align:center; box-shadow:0 10px 40px rgba(0,0,0,0.2);
+}
+.popup-btn-row { display:flex; justify-content:center; gap:10px; margin-top:20px; }
+.btn-cancel { padding:8px 14px; background:#eee; border-radius:8px; cursor:pointer; }
+.btn-confirm { padding:8px 14px; background:linear-gradient(135deg,#ffb347,#ffcc33); border-radius:8px; cursor:pointer; font-weight:600; }
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 </style>
 </head>
 
@@ -99,6 +126,7 @@ function fTime($t){ return $t ? date("g:i A", strtotime($t)) : "-"; }
 <div class="event-wrapper">
 
   <div class="event-hero">
+<<<<<<< HEAD
 
     <!-- CLICKABLE IMAGE -->
     <img src="<?= htmlspecialchars($imagePath) ?>"
@@ -107,26 +135,46 @@ function fTime($t){ return $t ? date("g:i A", strtotime($t)) : "-"; }
 
     <h2><?= htmlspecialchars($event['title']) ?></h2>
 
+=======
+    <img src="<?= htmlspecialchars($imagePath) ?>" class="event-img">
+
+    <h2><?= htmlspecialchars($event['title']) ?></h2>
+
+    <!-- PLACE -->
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
     <div class="detail-box">
       <label>Place</label>
       <p><?= htmlspecialchars($event['location']) ?></p>
     </div>
 
+<<<<<<< HEAD
+=======
+    <!-- DATE -->
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
     <div class="detail-box">
       <label>Date</label>
       <p><?= date("d M Y", strtotime($event['event_date'])) ?></p>
     </div>
 
+<<<<<<< HEAD
+=======
+    <!-- TIME -->
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
     <div class="detail-box">
       <label>Time</label>
       <p><?= fTime($event['start_time']) ?> - <?= fTime($event['end_time']) ?></p>
     </div>
 
+<<<<<<< HEAD
+=======
+    <!-- CATEGORY -->
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
     <div class="detail-box">
       <label>Category</label>
       <p><?= htmlspecialchars($event['category']) ?></p>
     </div>
 
+<<<<<<< HEAD
     <!-- ========================= -->
     <!-- PAID / FREE EVENT DISPLAY -->
     <!-- ========================= -->
@@ -158,11 +206,18 @@ function fTime($t){ return $t ? date("g:i A", strtotime($t)) : "-"; }
         </div>
     <?php endif; ?>
 
+=======
+    <!-- DESCRIPTION -->
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
     <div class="detail-box">
       <label>Description</label>
       <p><?= nl2br(htmlspecialchars($event['description'])) ?></p>
     </div>
 
+<<<<<<< HEAD
+=======
+    <!-- EXTRA INFO (only if organizer added) -->
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
     <?php if (!empty($event['activity_level'])): ?>
       <div class="detail-box">
         <label>Additional Information</label>
@@ -189,16 +244,23 @@ function fTime($t){ return $t ? date("g:i A", strtotime($t)) : "-"; }
   © 2025 Universiti Malaysia Sabah | Contact JHEP
 </footer>
 
+<<<<<<< HEAD
 <!-- FULLSCREEN IMAGE POPUP -->
 <div id="imgPopupOverlay" onclick="closeImagePopup()">
   <img id="popupImage">
 </div>
 
+=======
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 <!-- POPUP CONFIRM -->
 <div class="popup-backdrop" id="confirmPopup">
   <div class="popup-box">
     <h3>Confirm Registration</h3>
     <p>Are you sure you want to join this event?</p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
     <div class="popup-btn-row">
       <div class="btn-cancel" onclick="closeConfirm()">Cancel</div>
       <div class="btn-confirm" onclick="doRegister()">Confirm</div>
@@ -211,9 +273,16 @@ function fTime($t){ return $t ? date("g:i A", strtotime($t)) : "-"; }
   <div class="popup-box">
     <h3>Successfully Registered!</h3>
     <p>You have successfully joined this event.</p>
+<<<<<<< HEAD
     <div class="popup-btn-row">
       <a href="my_activity.php" class="btn-confirm">Go to My Activity</a>
       <div class="btn-cancel" onclick="closeSuccess()">Stay</div>
+=======
+
+    <div class="popup-btn-row">
+      <a href="my_activity.php" class="btn-confirm">Go to My Activity</a>
+      <div class="btn-cancel" onclick="closeSuccess()">Stay Here</div>
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
     </div>
   </div>
 </div>
@@ -226,15 +295,28 @@ function closeConfirm(){ document.getElementById("confirmPopup").style.display =
 
 function doRegister(){
     <?php if (!$requiresPayment): ?>
+<<<<<<< HEAD
+=======
+        // FREE → register via AJAX
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
         fetch("register_event.php", {
             method: "POST",
             headers: { "Content-Type":"application/x-www-form-urlencoded" },
             body: "event_id=<?= $eventId ?>"
+<<<<<<< HEAD
         }).then(() => {
+=======
+        })
+        .then(() => {
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
             closeConfirm();
             document.getElementById("successPopup").style.display = "flex";
         });
     <?php else: ?>
+<<<<<<< HEAD
+=======
+        // PAID → redirect
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
         window.location.href = "payment.php?event_id=<?= $eventId ?>";
     <?php endif; ?>
 }
@@ -242,6 +324,7 @@ function doRegister(){
 function closeSuccess(){
     document.getElementById("successPopup").style.display = "none";
 }
+<<<<<<< HEAD
 
 /* Fullscreen popup image */
 function openImagePopup(src){
@@ -251,6 +334,8 @@ function openImagePopup(src){
 function closeImagePopup(){
     document.getElementById("imgPopupOverlay").style.display = "none";
 }
+=======
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 </script>
 
 </body>

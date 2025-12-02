@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 //NUR-AFIDA BINTI MUHD AZUAN TIONG (BI22110453)
+=======
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 session_start();
 require 'config/db.php';
 
@@ -10,7 +13,10 @@ $stmt = $pdo->prepare("SELECT event_id, title, location, event_date, event_image
 $stmt->execute();
 $events = $stmt->fetchAll();
 ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +83,11 @@ $events = $stmt->fetchAll();
       <?php foreach ($events as $event): ?>
 
         <?php 
+<<<<<<< HEAD
           // image path
+=======
+          // Path gambar yang betul
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
           $imagePath = !empty($event['event_image']) 
             ? "uploads/events/" . $event['event_image'] 
             : "images/default_event.jpg";

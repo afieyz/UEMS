@@ -55,10 +55,14 @@ foreach ($events as $e) {
 <header class="events-header">
     <h1>University Event Management</h1>
 
+<<<<<<< HEAD
     <!-- Hamburger -->
     <div class="events-hamburger" onclick="toggleEventsMenu()">☰</div>
 
     <nav class="events-nav" id="eventsNavMenu">
+=======
+    <nav class="events-nav">
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a class="active" href="events.php">Events</a></li>
@@ -67,15 +71,23 @@ foreach ($events as $e) {
             <li><a href="my_activity.php">My Activity</a></li>
 
             <?php if (!isset($_SESSION['user_id'])): ?>
+<<<<<<< HEAD
                 <li><a href="auth/login.php" class="events-login-btn">Login</a></li>
             <?php else: ?>
                 <li><a href="profile.php" class="events-profile-link">My Profile</a></li>
                 <li><a href="auth/logout.php" class="events-login-btn">Logout</a></li>
+=======
+                <li><a href="auth/login.php">Login</a></li>
+            <?php else: ?>
+                <li><a href="profile.php">My Profile</a></li>
+                <li><a href="auth/logout.php">Logout</a></li>
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
             <?php endif; ?>
         </ul>
     </nav>
 </header>
 
+<<<<<<< HEAD
 <script>
 function toggleEventsMenu() {
     document.getElementById('eventsNavMenu').classList.toggle('show-menu');
@@ -83,6 +95,8 @@ function toggleEventsMenu() {
 </script>
 
 
+=======
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 <!-- FILTERS -->
 <div class="filter-container">
     <form method="GET">
@@ -157,7 +171,11 @@ function toggleEventsMenu() {
                     <p><strong>Date:</strong> <?= htmlspecialchars($event['event_date']) ?></p>
                     <p><strong>Location:</strong> <?= htmlspecialchars($event['location']) ?></p>
                     <p><strong>Category:</strong> <?= htmlspecialchars($event['category']) ?></p>
+<<<<<<< HEAD
                     <a class="join-btn" href="event_details.php?event_id=<?= $event['event_id'] ?>">View</a>
+=======
+                    <a class="join-btn" href="event_detail.php?event_id=<?= $event['event_id'] ?>">View</a>
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
                 </div>
             </div>
         <?php endforeach; ?>

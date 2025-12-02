@@ -32,6 +32,7 @@ $reports = $stmt->fetchAll();
   <title><?= htmlspecialchars($page_title) ?></title>
   <link rel="stylesheet" href="../assets/css/admin.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<<<<<<< HEAD
 
   <style>
     .zero-feedback { color: #d63031; font-weight: 600; }
@@ -67,6 +68,35 @@ $reports = $stmt->fetchAll();
   <h2 class="page-title"><?= htmlspecialchars($page_title) ?></h2>
 
   <div class="table-container">
+=======
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="admin-topbar">
+  <div class="top-left">
+    <a href="dashboard.php" class="top-link back-arrow">← Back</a>
+    <a href="../index.php" class="top-link">Home</a>
+  </div>
+  <div class="top-toggle" onclick="document.body.classList.toggle('nav-open')">☰</div>
+  <div class="top-right">
+    <a href="../auth/logout.php" class="top-link logout">Logout</a>
+  </div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="admin-mobile-menu">
+  <a href="../index.php">Home</a>
+  <a href="../auth/logout.php">Logout</a>
+</div>
+
+<!-- CONTENT -->
+<div class="dashboard-container">
+  <div class="admin-section">
+
+    <h2 class="page-title"><?= htmlspecialchars($page_title) ?></h2>
+
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
     <?php if (count($reports) > 0): ?>
       <table class="report-table">
         <thead>
@@ -80,6 +110,7 @@ $reports = $stmt->fetchAll();
             <th>Average Rating</th>
           </tr>
         </thead>
+<<<<<<< HEAD
 
         <tbody>
         <?php foreach ($reports as $r): ?>
@@ -101,12 +132,38 @@ $reports = $stmt->fetchAll();
         <?php endforeach; ?>
         </tbody>
 
+=======
+        <tbody>
+          <?php foreach ($reports as $r): ?>
+            <tr>
+              <td><?= htmlspecialchars($r['title']) ?></td>
+              <td><?= htmlspecialchars($r['organizer_name']) ?></td>
+              <td><?= htmlspecialchars($r['faculty']) ?></td>
+              <td><?= date('d M Y', strtotime($r['event_date'])) ?></td>
+              <td><?= htmlspecialchars($r['category']) ?></td>
+
+              <td class="<?= $r['total_feedback'] == 0 ? 'zero-feedback' : '' ?>">
+                <?= $r['total_feedback'] ?>
+              </td>
+
+              <td class="<?= $r['avg_rating'] !== null && $r['avg_rating'] < 3 ? 'low-rating' : '' ?>">
+                <?= $r['avg_rating'] !== null ? $r['avg_rating'] . ' / 5' : '-' ?>
+              </td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
       </table>
     <?php else: ?>
       <p style="text-align:center; color:gray;">No approved events found.</p>
     <?php endif; ?>
+<<<<<<< HEAD
   </div>
 
+=======
+
+  </div>
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 </div>
 
 <!-- FOOTER -->
@@ -115,11 +172,14 @@ $reports = $stmt->fetchAll();
   <span>University Event Management</span>
 </footer>
 
+<<<<<<< HEAD
 <script>
 function toggleMenu() {
   document.getElementById('adminNavMenu').classList.toggle('show-menu');
 }
 </script>
 
+=======
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 </body>
 </html>

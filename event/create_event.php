@@ -2,6 +2,10 @@
 session_start();
 require '../config/db.php';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 // User must login
 if (!isset($_SESSION['user_id'])) {
     header("Location: auth/login.php");
@@ -16,6 +20,7 @@ if (!isset($_SESSION['user_id'])) {
     <title>Create Event - Event System</title>
     <link rel="stylesheet" href="../assets/css/create_event.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<<<<<<< HEAD
 
     <style>
         /* Simple toggle section (matches your UI theme) */
@@ -37,6 +42,8 @@ if (!isset($_SESSION['user_id'])) {
             border: 1px solid #ddd;
         }
     </style>
+=======
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 </head>
 
 <body class="ce-body">
@@ -83,7 +90,10 @@ if (!isset($_SESSION['user_id'])) {
                 <option value="Academic">Academic</option>
                 <option value="Sports">Sports</option>
                 <option value="Competition">Competition</option>
+<<<<<<< HEAD
                 <option value="Entertainment">Entertainment</option>
+=======
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
                 <option value="Workshop">Workshop</option>
                 <option value="Cultural">Cultural</option>
             </select>
@@ -99,6 +109,7 @@ if (!isset($_SESSION['user_id'])) {
             <label>Maximum Participants</label>
             <input type="number" name="num_participants" min="1" required>
 
+<<<<<<< HEAD
             <!-- 🔹 Optional Payment Section -->
             <div class="price-toggle-box">
                 <label>
@@ -111,6 +122,8 @@ if (!isset($_SESSION['user_id'])) {
                 <input type="number" name="price" step="0.01" min="0" placeholder="Leave empty if free">
             </div>
 
+=======
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
             <label>Upload Proposal (PDF)</label>
             <input type="file" name="proposal_file" accept="application/pdf">
 
@@ -125,6 +138,7 @@ if (!isset($_SESSION['user_id'])) {
     &copy; 2025 Universiti Malaysia Sabah | Contact JHEP
 </footer>
 
+<<<<<<< HEAD
 <script>
 function togglePrice() {
     let box = document.getElementById("price-box");
@@ -132,5 +146,7 @@ function togglePrice() {
 }
 </script>
 
+=======
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 </body>
 </html>

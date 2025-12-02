@@ -25,6 +25,7 @@ $events = $stmt->fetchAll();
   <title>Event Proposals</title>
   <link rel="stylesheet" href="../assets/css/admin.css">
 </head>
+<<<<<<< HEAD
 <body>
 
 <!-- HEADER -->
@@ -54,6 +55,35 @@ $events = $stmt->fetchAll();
 
     <?php if (count($events) > 0): ?>
 
+=======
+<body class="admin-body">
+
+<!-- TOP BAR -->
+<div class="admin-topbar">
+  <div class="top-left">
+    <a href="dashboard.php" class="top-link back-arrow">← Back</a>
+    <a href="../index.php" class="top-link">Home</a>
+  </div>
+  <div class="top-toggle" onclick="document.body.classList.toggle('nav-open')">☰</div>
+  <div class="top-right">
+    <a href="../auth/logout.php" class="top-link logout">Logout</a>
+  </div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="admin-mobile-menu">
+  <a href="../index.php">Home</a>
+  <a href="../auth/logout.php">Logout</a>
+</div>
+
+<!-- CONTENT -->
+<div class="dashboard-container">
+  <div class="admin-section">
+
+    <h2 class="page-title">Pending Event Proposals</h2>
+
+    <?php if (count($events) > 0): ?>
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
       <table class="report-table">
         <thead>
           <tr>
@@ -72,12 +102,17 @@ $events = $stmt->fetchAll();
               <td><?= htmlspecialchars($event['faculty']) ?></td>
               <td><?= date('d M Y', strtotime($event['event_date'])) ?></td>
               <td>
+<<<<<<< HEAD
                 <a href="event_detail.php?event_id=<?= $event['event_id'] ?>" class="btn btn-view">View</a>
+=======
+                <a href="event_detail.php?event_id=<?= $event['event_id'] ?>" class="top-link">View</a>
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
               </td>
             </tr>
           <?php endforeach; ?>
         </tbody>
       </table>
+<<<<<<< HEAD
 
     <?php else: ?>
 
@@ -92,12 +127,22 @@ $events = $stmt->fetchAll();
 
 
 
+=======
+    <?php else: ?>
+      <p>No pending proposals found.</p>
+    <?php endif; ?>
+
+  </div> <!-- end admin-section -->
+</div> <!-- end dashboard-container -->
+
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 <!-- FOOTER -->
 <footer class="admin-footer">
   <img src="../assets/images/logo.png" class="footer-logo" alt="">
   <span>University Event Management</span>
 </footer>
 
+<<<<<<< HEAD
 <!-- JS FOR MENU -->
 <script>
 function toggleMenu() {
@@ -113,3 +158,15 @@ document.addEventListener('click', function(e) {
 
 </body>
 </html>
+=======
+<script>
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.admin-topbar') && !e.target.closest('.admin-mobile-menu')) {
+      document.body.classList.remove('nav-open');
+    }
+  });
+</script>
+
+</body>
+</html>
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3

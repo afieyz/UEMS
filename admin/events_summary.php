@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 // author : NUR-AFIDA BINTI MUHD AZUAN TIONG (BI22110453)
+=======
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 session_start();
 require '../config/db.php';
 
@@ -23,6 +26,7 @@ $events = $stmt->fetchAll();
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+<<<<<<< HEAD
   <title>Approved Events Summary - Event System</title>
 
   <link rel="stylesheet" href="../assets/css/admin.css">
@@ -53,6 +57,37 @@ $events = $stmt->fetchAll();
 <!-- CONTENT -->
 <div class="dashboard-container">
   <h2 class="page-title">Approved Events</h2>
+=======
+  <title>Approved Events Summary</title>
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body class="admin-body">
+
+<!-- TOP BAR -->
+<div class="admin-topbar">
+  <div class="top-left">
+    <a href="dashboard.php" class="top-link back-arrow">← Back</a>
+    <a href="./index.php" class="top-link">Home</a>
+  </div>
+  <div class="top-toggle" onclick="document.body.classList.toggle('nav-open')">☰</div>
+  <div class="top-right">
+    <a href="./auth/logout.php" class="top-link logout">Logout</a>
+  </div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="admin-mobile-menu">
+  <a href="./index.php">Home</a>
+  <a href="./auth/logout.php">Logout</a>
+</div>
+
+<!-- CONTENT (kekalkan bahagian asal) -->
+
+
+<!-- CONTENT -->
+<div class="admin-section">
+  <h2>Approved Events</h2>
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
 
   <?php if (count($events) > 0): ?>
     <table class="report-table">
@@ -82,13 +117,19 @@ $events = $stmt->fetchAll();
   <?php endif; ?>
 </div>
 
+<<<<<<< HEAD
 <!-- FOOTER -->
 <footer class="admin-footer">
   <img src="../assets/images/logo.png" class="footer-logo" alt="">
+=======
+<footer class="admin-footer">
+  <img src="./assets/images/logo.png" class="footer-logo" alt="">
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
   <span>University Event Management</span>
 </footer>
 
 <script>
+<<<<<<< HEAD
 function toggleAdminMenu() {
     document.getElementById("adminNavMenu").classList.toggle("show-menu");
 }
@@ -96,3 +137,14 @@ function toggleAdminMenu() {
 
 </body>
 </html>
+=======
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.admin-topbar') && !e.target.closest('.admin-mobile-menu')) {
+      document.body.classList.remove('nav-open');
+    }
+  });
+</script>
+
+</body>
+</html>
+>>>>>>> a579976671b823e297fa111d9216c91ffcd9c1b3
