@@ -1,0 +1,59 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fdfdfd;
+  margin: 0;
+  padding: 40px;
+}
+
+.notif-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 26px;
+  color: #333;
+}
+
+.empty-msg {
+  color: #888;
+  font-style: italic;
+}
+
+.notif-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.notif-list li {
+  padding: 15px 20px;
+  border-left: 4px solid #ffcc33;
+  background: #fffde7;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.notif-message {
+  font-weight: 500;
+  color: #333;
+}
+
+.notif-time {
+  font-size: 13px;
+  color: #777;
+  margin-top: 6px;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  text-decoration: none;
+  color: #0984e3;
+  font-weight: 600;
+}

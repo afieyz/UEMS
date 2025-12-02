@@ -1,0 +1,78 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 40px;
+  color: #333;
+}
+
+.attendance-container {
+  max-width: 850px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+p {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+}
+
+table th,
+table td {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f1f1f1;
+  font-weight: 600;
+  color: #444;
+}
+
+select {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+button[type="submit"] {
+  margin-top: 25px;
+  padding: 10px 20px;
+  background-color: #0984e3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #056abf;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  text-decoration: none;
+  color: #0984e3;
+  font-weight: 600;
+}
